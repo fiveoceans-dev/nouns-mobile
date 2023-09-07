@@ -1,0 +1,57 @@
+{
+  "object" : {
+    "artifacts" : [
+      {
+        "kind" : "xcframework",
+        "packageRef" : {
+          "identity" : "metamask-ios-sdk-main",
+          "kind" : "root",
+          "location" : "/Users/mbp1/DEV/IOS/NounsDAOApp/metamask-ios-sdk-main",
+          "name" : "metamask-ios-sdk-main"
+        },
+        "path" : "/Users/mbp1/DEV/IOS/NounsDAOApp/metamask-ios-sdk-main/Sources/metamask-ios-sdk/Frameworks/Ecies.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "Ecies"
+      }
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "socket.io-client-swift",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/socketio/socket.io-client-swift",
+          "name" : "SocketIO"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "af5ce97b755d964235348d96f6db5cbdcbe334a5",
+            "version" : "16.0.1"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "socket.io-client-swift"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "starscream",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/daltoniam/Starscream.git",
+          "name" : "Starscream"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "df8d82047f6654d8e4b655d1b1525c64e1059d21",
+            "version" : "4.0.4"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "Starscream"
+      }
+    ]
+  },
+  "version" : 6
+}

@@ -1,0 +1,181 @@
+query CurrentAuctionQuery {
+  _meta {
+    block {
+      timestamp
+      number
+      hash
+    }
+  }
+  auctions(where: {settled: false}) {
+    id
+    startTime
+    endTime
+    noun {
+      seed {
+        id
+        head
+        glasses
+        body
+        accessory
+        background
+      }
+    }
+    bids(orderBy: amount, orderDirection: desc) {
+      amount
+      bidder {
+        id
+      }
+    }
+  }
+}
+
+query AuctionQuery {
+  auctions(where: {id: 1}) {
+    id
+    startTime
+    endTime
+    bids {
+      amount
+      bidder {
+        id
+      }
+    }
+  }
+}
+
+query AuctionBidderQuery {
+  auctions(where: {id: 1}) {
+    id
+    startTime
+    endTime
+    bids {
+      amount
+      bidder {
+        id
+      }
+    }
+  }
+}
+
+query NounInfoQuery($nounInfoID: ID!) {
+  noun(id: $nounInfoID) {
+    seed {
+      id
+      head
+      glasses
+      accessory
+      body
+      background
+    }
+  }
+}
+
+query NounsWithSameTraits($where: Noun_filter = { seed_: { head: "94" } }) {
+  nouns(where: $where) {
+    seed {
+      id
+      head
+      glasses
+      body
+      accessory
+      background
+    }
+  }
+}
+
+query NounAuctionsInfoQuery($nounId: ID!) {
+  auctions(where: {id: $nounId}) {
+    id
+    bids(first: 1, orderBy: amount, orderDirection: desc) {
+      amount
+      bidder {
+        id
+      }
+    }
+  }
+}
+
+# Proposals
+query AllProposalsQuery {
+  proposals(orderBy: createdBlock, orderDirection: desc, first: 1000) {
+    id
+    title
+    status
+    forVotes
+    againstVotes
+    abstainVotes
+    quorumVotes
+    totalSupply
+  }
+}
+
+query AllOngoingProposalsQuery {
+  _meta {
+    block {
+      timestamp
+      number
+      hash
+    }
+  }
+  proposals(where: {status_in: [ACTIVE, PENDING]}, orderBy: createdBlock, orderDirection: desc, first: 12) {
+    id
+    title
+    status
+    forVotes
+    againstVotes
+    abstainVotes
+    quorumVotes
+    totalSupply
+    startBlock
+    endBlock
+  }
+}
+
+query ProposalQuery($id: ID!) {
+  proposals(where: {id: $id}) {
+    id
+    title
+    status
+    forVotes
+    againstVotes
+    abstainVotes
+    quorumVotes
+    totalSupply
+    description
+  }
+}
+
+# Proposals candidates
+query AllProposalsCandidatesQuery {
+  proposalCandidates(orderBy: createdBlock, orderDirection: asc, first: 1000, skip: 1) {
+    id
+    proposer
+    latestVersion {
+      id
+      content {
+        title
+        proposer
+        signatures
+      }
+    }
+    createdTimestamp
+    canceledTimestamp
+  }
+}
+
+query CandidateProposalQuery($id: ID!) {
+  proposalCandidates(where: {id: $id}) {
+    id
+    proposer
+    latestVersion {
+    id
+      content {
+        title
+        proposer
+        signatures
+      }
+    }
+    createdTimestamp
+    canceledTimestamp
+  }
+}
