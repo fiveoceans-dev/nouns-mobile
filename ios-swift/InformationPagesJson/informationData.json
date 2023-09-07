@@ -1,0 +1,36 @@
+[
+    {
+        "title": "Auction",
+        "subtitle": "In this tab, you can track information about noun auctions in real-time. See recently minted nouns and explore auction prices.",
+        "sectionsNumber": 3,
+        "sectionTitle-1": "What is nouns?",
+        "sectionDesctiption-1": "Behold, an infinite work of art! Nouns is a community-owned brand that makes a positive impact by funding ideas and fostering collaboration. From collectors and technologists, to non-profits and brands, Nouns is for everyone.",
+        "sectionTitle-2": "Art",
+        "sectionDesctiption-2": "Nouns are generated randomly based Ethereum block hashes. There are no 'if' statements or other rules governing Noun trait scarcity, which makes all Nouns equally rare. The Noun Seeder contract is used to determine Noun traits during the minting process. The seeder contract can be replaced to allow for future trait generation algorithm upgrades. Additionally, it can be locked by the Nouns DAO to prevent any future updates.",
+        "sectionTitle-3": "Auction",
+        "sectionDesctiption-3": "The Nouns Auction Contract will act as a self-sufficient Noun generation and distribution mechanism, auctioning one Noun every 24 hours, forever. 100% of auction proceeds (ETH) are automatically deposited in the Nouns DAO treasury, where they are governed by Noun owners. Each time an auction is settled, the settlement transaction will also cause a new Noun to be minted and a new 24 hour auction to begin. While settlement is most heavily incentivized for the winning bidder, it can be triggered by anyone, allowing the system to trustlessly auction Nouns as long as Ethereum is operational and there are interested bidders."
+
+    },
+    {
+      "title": "Proposals",
+      "subtitle": "In this tab, you can track information about ongoing and past proposals. You can see time when voting starts and see who votes for and against proposals to allocate the treassury.",
+      "sectionsNumber": 3,
+      "sectionTitle-1": "",
+      "sectionDesctiption-1": "",
+      "sectionTitle-2": "Art",
+      "sectionDesctiption-2": "",
+      "sectionTitle-3": "Auction",
+      "sectionDesctiption-3": ""
+    },
+    {
+      "title": "Template",
+      "subtitle": "",
+      "sectionsNumber": 3,
+      "sectionTitle-1": "",
+      "sectionDesctiption-1": "",
+      "sectionTitle-2": "Art",
+      "sectionDesctiption-2": "",
+      "sectionTitle-3": "Auction",
+      "sectionDesctiption-3": ""
+    }
+]
